@@ -16,7 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
         LivroDigital livro = new LivroDigital("Padrões de projeto", "Conteúdo completo do livro...");
+        LivroProxy proxy = new LivroProxy(TipoUsuario.COMUM, livro);
+        proxy.ler();
+        System.out.println("-=-=-=-=-=-=-=-");
+        LivroProxy proxyPremium = new LivroProxy(TipoUsuario.PREMIUM, livro);
+        proxyPremium.ler();
 
-        livro.ler();
     }
 }
